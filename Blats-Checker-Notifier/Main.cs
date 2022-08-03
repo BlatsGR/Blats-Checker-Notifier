@@ -412,7 +412,6 @@ namespace Blats_Checker_Notifier
                 seconds = 60;
                 CountdownTimer();
                 ScriptChecker();
-                ipReciever();
             }
         }
 
