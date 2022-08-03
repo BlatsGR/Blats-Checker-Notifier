@@ -2,7 +2,7 @@
 
 Blats Checker & notifier is a program that you can ping ips or check if any port is open. You can also set a sender email (hotmail for now) and the email password, as well as a recipient email to which notifications will be sent if any port is closed or cannot ping any of the ips you have set. You can define how long this check will take place (available: 1 minute, 3 minutes, 5 minutes, 10 minutes, 15 minutes, 20 minutes, 30 minutes, 60 minutes). With the save button, everything you have defined is saved locally in the folder: C:/Blats-Notifier/MySettings.txt. With the load button, the next time you open the application, everything will run as you set it! It has light and dark mode.
 
-Download Link of stable version: https://mega.nz/file/nbpU0QxA#RFoLd-UfZCwtkTsil2bJvDCwPVVyV4iIbTPhySyt3I4
+Download Link of stable version: https://mega.nz/file/LPgAWZgb#g-xog_jZKjpwMWJ8Nkbyzr2-kiVCzP4PGzlWrLpARpo
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
