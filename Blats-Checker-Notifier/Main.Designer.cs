@@ -46,6 +46,7 @@
             this.lblIPHostname2 = new MaterialSkin.Controls.MaterialLabel();
             this.txtIPHostname2 = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.WhoIsLookup = new System.Windows.Forms.TabPage();
             this.PingSettings = new System.Windows.Forms.TabPage();
             this.txtPing20 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtPing19 = new MaterialSkin.Controls.MaterialTextBox();
@@ -170,11 +171,13 @@
             this.lblCurrentIP = new MaterialSkin.Controls.MaterialLabel();
             this.lblDevelop = new MaterialSkin.Controls.MaterialLabel();
             this.lblShowTime = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1.SuspendLayout();
             this.PingTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PortTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.WhoIsLookup.SuspendLayout();
             this.PingSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PortSettings.SuspendLayout();
@@ -187,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SaveLoadSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -202,11 +206,13 @@
             this.imageList1.Images.SetKeyName(5, "boolean-search.png");
             this.imageList1.Images.SetKeyName(6, "search.png");
             this.imageList1.Images.SetKeyName(7, "save.png");
+            this.imageList1.Images.SetKeyName(8, "whois.png");
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.PingTool);
             this.materialTabControl1.Controls.Add(this.PortTool);
+            this.materialTabControl1.Controls.Add(this.WhoIsLookup);
             this.materialTabControl1.Controls.Add(this.PingSettings);
             this.materialTabControl1.Controls.Add(this.PortSettings);
             this.materialTabControl1.Controls.Add(this.EmailSettings);
@@ -231,10 +237,10 @@
             this.PingTool.Controls.Add(this.txtIPHostname);
             this.PingTool.Controls.Add(this.pictureBox2);
             this.PingTool.ImageKey = "www.png";
-            this.PingTool.Location = new System.Drawing.Point(4, 39);
+            this.PingTool.Location = new System.Drawing.Point(4, 74);
             this.PingTool.Name = "PingTool";
             this.PingTool.Padding = new System.Windows.Forms.Padding(3);
-            this.PingTool.Size = new System.Drawing.Size(925, 476);
+            this.PingTool.Size = new System.Drawing.Size(925, 441);
             this.PingTool.TabIndex = 0;
             this.PingTool.Text = "Ping Tool";
             this.PingTool.UseVisualStyleBackColor = true;
@@ -478,6 +484,18 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            // 
+            // WhoIsLookup
+            // 
+            this.WhoIsLookup.Controls.Add(this.pictureBox9);
+            this.WhoIsLookup.ImageKey = "whois.png";
+            this.WhoIsLookup.Location = new System.Drawing.Point(4, 39);
+            this.WhoIsLookup.Name = "WhoIsLookup";
+            this.WhoIsLookup.Padding = new System.Windows.Forms.Padding(3);
+            this.WhoIsLookup.Size = new System.Drawing.Size(925, 476);
+            this.WhoIsLookup.TabIndex = 8;
+            this.WhoIsLookup.Text = "WHOIS Lookup";
+            this.WhoIsLookup.UseVisualStyleBackColor = true;
             // 
             // PingSettings
             // 
@@ -1857,7 +1875,7 @@
             this.btnSendTestEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendTestEmail.HighEmphasis = true;
             this.btnSendTestEmail.Icon = null;
-            this.btnSendTestEmail.Location = new System.Drawing.Point(171, 329);
+            this.btnSendTestEmail.Location = new System.Drawing.Point(493, 386);
             this.btnSendTestEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSendTestEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSendTestEmail.Name = "btnSendTestEmail";
@@ -1878,7 +1896,7 @@
             this.lblEmailTester.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblEmailTester.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblEmailTester.HighEmphasis = true;
-            this.lblEmailTester.Location = new System.Drawing.Point(19, 336);
+            this.lblEmailTester.Location = new System.Drawing.Point(302, 393);
             this.lblEmailTester.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmailTester.Name = "lblEmailTester";
             this.lblEmailTester.Size = new System.Drawing.Size(145, 24);
@@ -1939,7 +1957,7 @@
             this.txtEmailTo.Depth = 0;
             this.txtEmailTo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmailTo.LeadingIcon = null;
-            this.txtEmailTo.Location = new System.Drawing.Point(162, 234);
+            this.txtEmailTo.Location = new System.Drawing.Point(302, 313);
             this.txtEmailTo.MaxLength = 50;
             this.txtEmailTo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmailTo.Multiline = false;
@@ -1956,7 +1974,7 @@
             this.txtEmailPassFrom.Depth = 0;
             this.txtEmailPassFrom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmailPassFrom.LeadingIcon = null;
-            this.txtEmailPassFrom.Location = new System.Drawing.Point(241, 172);
+            this.txtEmailPassFrom.Location = new System.Drawing.Point(302, 234);
             this.txtEmailPassFrom.MaxLength = 50;
             this.txtEmailPassFrom.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmailPassFrom.Multiline = false;
@@ -1975,7 +1993,7 @@
             this.lblEmailReciever.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblEmailReciever.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblEmailReciever.HighEmphasis = true;
-            this.lblEmailReciever.Location = new System.Drawing.Point(19, 260);
+            this.lblEmailReciever.Location = new System.Drawing.Point(302, 286);
             this.lblEmailReciever.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmailReciever.Name = "lblEmailReciever";
             this.lblEmailReciever.Size = new System.Drawing.Size(137, 24);
@@ -1991,7 +2009,7 @@
             this.lblSenderPass.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblSenderPass.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblSenderPass.HighEmphasis = true;
-            this.lblSenderPass.Location = new System.Drawing.Point(19, 198);
+            this.lblSenderPass.Location = new System.Drawing.Point(302, 209);
             this.lblSenderPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSenderPass.Name = "lblSenderPass";
             this.lblSenderPass.Size = new System.Drawing.Size(216, 24);
@@ -2007,7 +2025,7 @@
             this.lblEmailSender.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblEmailSender.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblEmailSender.HighEmphasis = true;
-            this.lblEmailSender.Location = new System.Drawing.Point(19, 147);
+            this.lblEmailSender.Location = new System.Drawing.Point(302, 130);
             this.lblEmailSender.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmailSender.Name = "lblEmailSender";
             this.lblEmailSender.Size = new System.Drawing.Size(209, 24);
@@ -2022,7 +2040,7 @@
             this.txtEmailFrom.Depth = 0;
             this.txtEmailFrom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmailFrom.LeadingIcon = null;
-            this.txtEmailFrom.Location = new System.Drawing.Point(234, 121);
+            this.txtEmailFrom.Location = new System.Drawing.Point(302, 157);
             this.txtEmailFrom.MaxLength = 50;
             this.txtEmailFrom.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEmailFrom.Multiline = false;
@@ -2175,9 +2193,9 @@
             this.ThemeSettings.Controls.Add(this.pictureBox1);
             this.ThemeSettings.Controls.Add(this.themeSwitcher);
             this.ThemeSettings.ImageKey = "theme.png";
-            this.ThemeSettings.Location = new System.Drawing.Point(4, 39);
+            this.ThemeSettings.Location = new System.Drawing.Point(4, 74);
             this.ThemeSettings.Name = "ThemeSettings";
-            this.ThemeSettings.Size = new System.Drawing.Size(925, 476);
+            this.ThemeSettings.Size = new System.Drawing.Size(925, 441);
             this.ThemeSettings.TabIndex = 6;
             this.ThemeSettings.Text = "Theme Settings";
             this.ThemeSettings.UseVisualStyleBackColor = true;
@@ -2315,9 +2333,9 @@
             this.SaveLoadSettings.Controls.Add(this.lblSaveAndLoad);
             this.SaveLoadSettings.Controls.Add(this.pictureBox8);
             this.SaveLoadSettings.ImageKey = "save.png";
-            this.SaveLoadSettings.Location = new System.Drawing.Point(4, 39);
+            this.SaveLoadSettings.Location = new System.Drawing.Point(4, 74);
             this.SaveLoadSettings.Name = "SaveLoadSettings";
-            this.SaveLoadSettings.Size = new System.Drawing.Size(925, 476);
+            this.SaveLoadSettings.Size = new System.Drawing.Size(925, 441);
             this.SaveLoadSettings.TabIndex = 7;
             this.SaveLoadSettings.Text = "Save - Load";
             this.SaveLoadSettings.UseVisualStyleBackColor = true;
@@ -2512,6 +2530,16 @@
             this.lblShowTime.Text = "Next check in:";
             this.lblShowTime.UseAccent = true;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Blats_Checker_Notifier.Properties.Resources._2021_BlatsIcon_BGLess_Color;
+            this.pictureBox9.Location = new System.Drawing.Point(352, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2536,6 +2564,7 @@
             this.PortTool.ResumeLayout(false);
             this.PortTool.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.WhoIsLookup.ResumeLayout(false);
             this.PingSettings.ResumeLayout(false);
             this.PingSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2554,6 +2583,7 @@
             this.SaveLoadSettings.ResumeLayout(false);
             this.SaveLoadSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2701,5 +2731,7 @@
         private MaterialSkin.Controls.MaterialLabel lblSaveLoadInfo;
         private FontAwesome.Sharp.IconButton iconSaveLoadInfo;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private TabPage WhoIsLookup;
+        private PictureBox pictureBox9;
     }
 }

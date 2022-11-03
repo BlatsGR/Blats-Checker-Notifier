@@ -279,16 +279,23 @@ namespace Blats_Checker_Notifier
 
         private void ipReciever()
         {
-            string url = "https://services.blats.gr/ipreciever.php";
-            System.Net.WebRequest req = System.Net.WebRequest.Create(url);
-            System.Net.WebResponse resp = req.GetResponse();
-            System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
-            string response = sr.ReadToEnd().Trim();
-            string[] ipAddressWithText = response.Split(':');
-            string ipAddressWithHTMLEnd = ipAddressWithText[1].Substring(1);
-            string[] ipAddress = ipAddressWithHTMLEnd.Split('<');
-            string mainIP = ipAddress[0];
-            lblCurrentIP.Text = "Your current IP Address: " + mainIP;
+            try
+            {
+                string url = "https://services.blats.gr/ipreciever.php";
+                System.Net.WebRequest req = System.Net.WebRequest.Create(url);
+                System.Net.WebResponse resp = req.GetResponse();
+                System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+                string response = sr.ReadToEnd().Trim();
+                string[] ipAddressWithText = response.Split(':');
+                string ipAddressWithHTMLEnd = ipAddressWithText[1].Substring(1);
+                string[] ipAddress = ipAddressWithHTMLEnd.Split('<');
+                string mainIP = ipAddress[0];
+                lblCurrentIP.Text = "Your current IP Address: " + mainIP;
+            }
+            catch
+            {
+            }
+
         }
 
 
@@ -412,6 +419,7 @@ namespace Blats_Checker_Notifier
                 seconds = 60;
                 CountdownTimer();
                 ScriptChecker();
+                ipReciever();
             }
         }
 
