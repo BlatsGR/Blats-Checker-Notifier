@@ -47,6 +47,10 @@
             this.txtIPHostname2 = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.WhoIsLookup = new System.Windows.Forms.TabPage();
+            this.btnWhoIs = new MaterialSkin.Controls.MaterialButton();
+            this.txtWhoIs = new MaterialSkin.Controls.MaterialTextBox();
+            this.lblWhois = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.PingSettings = new System.Windows.Forms.TabPage();
             this.txtPing20 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtPing19 = new MaterialSkin.Controls.MaterialTextBox();
@@ -171,13 +175,15 @@
             this.lblCurrentIP = new MaterialSkin.Controls.MaterialLabel();
             this.lblDevelop = new MaterialSkin.Controls.MaterialLabel();
             this.lblShowTime = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.materialTabControl1.SuspendLayout();
             this.PingTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PortTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.WhoIsLookup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.PingSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PortSettings.SuspendLayout();
@@ -190,7 +196,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SaveLoadSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -320,10 +325,10 @@
             this.PortTool.Controls.Add(this.txtIPHostname2);
             this.PortTool.Controls.Add(this.pictureBox3);
             this.PortTool.ImageKey = "firewall.png";
-            this.PortTool.Location = new System.Drawing.Point(4, 39);
+            this.PortTool.Location = new System.Drawing.Point(4, 74);
             this.PortTool.Name = "PortTool";
             this.PortTool.Padding = new System.Windows.Forms.Padding(3);
-            this.PortTool.Size = new System.Drawing.Size(925, 476);
+            this.PortTool.Size = new System.Drawing.Size(925, 441);
             this.PortTool.TabIndex = 1;
             this.PortTool.Text = "Port Tool";
             this.PortTool.UseVisualStyleBackColor = true;
@@ -487,15 +492,84 @@
             // 
             // WhoIsLookup
             // 
+            this.WhoIsLookup.Controls.Add(this.materialLabel2);
+            this.WhoIsLookup.Controls.Add(this.iconButton1);
+            this.WhoIsLookup.Controls.Add(this.btnWhoIs);
+            this.WhoIsLookup.Controls.Add(this.txtWhoIs);
+            this.WhoIsLookup.Controls.Add(this.lblWhois);
             this.WhoIsLookup.Controls.Add(this.pictureBox9);
             this.WhoIsLookup.ImageKey = "whois.png";
-            this.WhoIsLookup.Location = new System.Drawing.Point(4, 39);
+            this.WhoIsLookup.Location = new System.Drawing.Point(4, 74);
             this.WhoIsLookup.Name = "WhoIsLookup";
             this.WhoIsLookup.Padding = new System.Windows.Forms.Padding(3);
-            this.WhoIsLookup.Size = new System.Drawing.Size(925, 476);
+            this.WhoIsLookup.Size = new System.Drawing.Size(925, 441);
             this.WhoIsLookup.TabIndex = 8;
             this.WhoIsLookup.Text = "WHOIS Lookup";
             this.WhoIsLookup.UseVisualStyleBackColor = true;
+            // 
+            // btnWhoIs
+            // 
+            this.btnWhoIs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnWhoIs.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnWhoIs.Depth = 0;
+            this.btnWhoIs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWhoIs.HighEmphasis = true;
+            this.btnWhoIs.Icon = null;
+            this.btnWhoIs.Location = new System.Drawing.Point(348, 229);
+            this.btnWhoIs.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnWhoIs.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnWhoIs.Name = "btnWhoIs";
+            this.btnWhoIs.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnWhoIs.Size = new System.Drawing.Size(119, 36);
+            this.btnWhoIs.TabIndex = 10;
+            this.btnWhoIs.Text = "WhoIs Check";
+            this.btnWhoIs.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnWhoIs.UseAccentColor = false;
+            this.btnWhoIs.UseVisualStyleBackColor = true;
+            this.btnWhoIs.Click += new System.EventHandler(this.btnWhoIs_Click);
+            // 
+            // txtWhoIs
+            // 
+            this.txtWhoIs.AnimateReadOnly = false;
+            this.txtWhoIs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtWhoIs.Depth = 0;
+            this.txtWhoIs.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtWhoIs.LeadingIcon = null;
+            this.txtWhoIs.Location = new System.Drawing.Point(317, 170);
+            this.txtWhoIs.MaxLength = 50;
+            this.txtWhoIs.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtWhoIs.Multiline = false;
+            this.txtWhoIs.Name = "txtWhoIs";
+            this.txtWhoIs.Size = new System.Drawing.Size(175, 50);
+            this.txtWhoIs.TabIndex = 7;
+            this.txtWhoIs.Text = "";
+            this.txtWhoIs.TrailingIcon = null;
+            // 
+            // lblWhois
+            // 
+            this.lblWhois.AutoSize = true;
+            this.lblWhois.Depth = 0;
+            this.lblWhois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblWhois.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblWhois.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblWhois.HighEmphasis = true;
+            this.lblWhois.Location = new System.Drawing.Point(340, 134);
+            this.lblWhois.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblWhois.Name = "lblWhois";
+            this.lblWhois.Size = new System.Drawing.Size(127, 24);
+            this.lblWhois.TabIndex = 6;
+            this.lblWhois.Text = "WhoIs Lookup";
+            this.lblWhois.UseAccent = true;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Blats_Checker_Notifier.Properties.Resources._2021_BlatsIcon_BGLess_Color;
+            this.pictureBox9.Location = new System.Drawing.Point(352, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
             // 
             // PingSettings
             // 
@@ -545,9 +619,9 @@
             this.PingSettings.Controls.Add(this.lblPing2);
             this.PingSettings.Controls.Add(this.pictureBox4);
             this.PingSettings.ImageKey = "search.png";
-            this.PingSettings.Location = new System.Drawing.Point(4, 39);
+            this.PingSettings.Location = new System.Drawing.Point(4, 74);
             this.PingSettings.Name = "PingSettings";
-            this.PingSettings.Size = new System.Drawing.Size(925, 476);
+            this.PingSettings.Size = new System.Drawing.Size(925, 441);
             this.PingSettings.TabIndex = 2;
             this.PingSettings.Text = "Ping Settings";
             this.PingSettings.UseVisualStyleBackColor = true;
@@ -1284,9 +1358,9 @@
             this.PortSettings.Controls.Add(this.lblPort1);
             this.PortSettings.Controls.Add(this.pictureBox5);
             this.PortSettings.ImageKey = "boolean-search.png";
-            this.PortSettings.Location = new System.Drawing.Point(4, 39);
+            this.PortSettings.Location = new System.Drawing.Point(4, 74);
             this.PortSettings.Name = "PortSettings";
-            this.PortSettings.Size = new System.Drawing.Size(925, 476);
+            this.PortSettings.Size = new System.Drawing.Size(925, 441);
             this.PortSettings.TabIndex = 3;
             this.PortSettings.Text = "Port Settings";
             this.PortSettings.UseVisualStyleBackColor = true;
@@ -1860,9 +1934,9 @@
             this.EmailSettings.Controls.Add(this.txtEmailFrom);
             this.EmailSettings.Controls.Add(this.pictureBox6);
             this.EmailSettings.ImageKey = "email.png";
-            this.EmailSettings.Location = new System.Drawing.Point(4, 39);
+            this.EmailSettings.Location = new System.Drawing.Point(4, 74);
             this.EmailSettings.Name = "EmailSettings";
-            this.EmailSettings.Size = new System.Drawing.Size(925, 476);
+            this.EmailSettings.Size = new System.Drawing.Size(925, 441);
             this.EmailSettings.TabIndex = 4;
             this.EmailSettings.Text = "Email Settings";
             this.EmailSettings.UseVisualStyleBackColor = true;
@@ -2069,9 +2143,9 @@
             this.TimerSettings.Controls.Add(this.iconTimerInfo);
             this.TimerSettings.Controls.Add(this.pictureBox7);
             this.TimerSettings.ImageKey = "stopwatch.png";
-            this.TimerSettings.Location = new System.Drawing.Point(4, 39);
+            this.TimerSettings.Location = new System.Drawing.Point(4, 74);
             this.TimerSettings.Name = "TimerSettings";
-            this.TimerSettings.Size = new System.Drawing.Size(925, 476);
+            this.TimerSettings.Size = new System.Drawing.Size(925, 441);
             this.TimerSettings.TabIndex = 5;
             this.TimerSettings.Text = "Timer Settings";
             this.TimerSettings.UseVisualStyleBackColor = true;
@@ -2530,15 +2604,35 @@
             this.lblShowTime.Text = "Next check in:";
             this.lblShowTime.UseAccent = true;
             // 
-            // pictureBox9
+            // materialLabel2
             // 
-            this.pictureBox9.Image = global::Blats_Checker_Notifier.Properties.Resources._2021_BlatsIcon_BGLess_Color;
-            this.pictureBox9.Location = new System.Drawing.Point(352, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(110, 110);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel2.Location = new System.Drawing.Point(49, 446);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(587, 14);
+            this.materialLabel2.TabIndex = 20;
+            this.materialLabel2.Text = "WhoIs Lookup using cmd to retrieve infos do not worry when you see a cmd window! " +
+    "Unsupported TLDs: .gr\r\n";
+            this.materialLabel2.UseAccent = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(10, 440);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(33, 25);
+            this.iconButton1.TabIndex = 19;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -2565,6 +2659,8 @@
             this.PortTool.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.WhoIsLookup.ResumeLayout(false);
+            this.WhoIsLookup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.PingSettings.ResumeLayout(false);
             this.PingSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2583,7 +2679,6 @@
             this.SaveLoadSettings.ResumeLayout(false);
             this.SaveLoadSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2733,5 +2828,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private TabPage WhoIsLookup;
         private PictureBox pictureBox9;
+        private MaterialSkin.Controls.MaterialButton btnWhoIs;
+        private MaterialSkin.Controls.MaterialTextBox txtWhoIs;
+        private MaterialSkin.Controls.MaterialLabel lblWhois;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

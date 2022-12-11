@@ -13,6 +13,8 @@ using System.Net.NetworkInformation;
 using System.Net;
 using System.Net.Mail;
 using System.Timers;
+using System.Runtime.InteropServices;
+using System.IO.Compression;
 
 namespace Blats_Checker_Notifier
 {
@@ -361,6 +363,43 @@ namespace Blats_Checker_Notifier
             {
                 MaterialMessageBox.Show("Something went wrong. We couldnt send your email, please check your credentials.", "Email Settings", MessageBoxButtons.OK, FlexibleMaterialForm.ButtonsPosition.Center);
             }
+        }
+
+        private void WhoIsChecker() // checking whois from cmd
+        {
+            // adding the path where the folder and the zip file will created
+            string folderPath = @"C:\Blats-Notifier";
+            string filePath = @"C:\Blats-Notifier\WhoIs.zip";
+            string extractPath = @"C:\Blats-Notifier\WhoIs";
+            if (!Directory.Exists(folderPath))
+            {
+                System.IO.Directory.CreateDirectory(folderPath);
+                WebClient Client = new WebClient();
+                Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
+                ZipFile.ExtractToDirectory(filePath, extractPath);
+            }
+            else
+            {
+                if(!File.Exists(filePath))
+                {
+                    WebClient Client = new WebClient();
+                    Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
+                    ZipFile.ExtractToDirectory(filePath, extractPath);
+                }
+            }
+            // open cmd command into WhoIs
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/C cd C:/Blats-Notifier/WhoIs && whois -v " + txtWhoIs.Text + " > " + txtWhoIs.Text + ".txt";
+            process.StartInfo = startInfo;
+            process.Start();
+        }
+
+        private void btnWhoIs_Click(object sender, EventArgs e)
+        {
+            WhoIsChecker();
         }
         #endregion
 
