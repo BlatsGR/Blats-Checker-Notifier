@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Net;
+using AutoUpdaterDotNET;
 
 namespace Blats_Checker_Notifier
 {
@@ -29,6 +30,7 @@ namespace Blats_Checker_Notifier
 
         public splashscreen()
         {
+            AutoUpdater.Start("https://services.blats.gr/blats-checker-notifier/AutoUpdater.xml");
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             ProgressBar1.Value = 0;

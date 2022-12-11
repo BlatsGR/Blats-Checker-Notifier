@@ -15,6 +15,7 @@ using System.Net.Mail;
 using System.Timers;
 using System.Runtime.InteropServices;
 using System.IO.Compression;
+using AutoUpdaterDotNET;
 
 namespace Blats_Checker_Notifier
 {
@@ -459,6 +460,7 @@ namespace Blats_Checker_Notifier
                 CountdownTimer();
                 ScriptChecker();
                 ipReciever();
+                AutoUpdater.Start("https://services.blats.gr/blats-checker-notifier/AutoUpdater.xml");
             }
         }
 
