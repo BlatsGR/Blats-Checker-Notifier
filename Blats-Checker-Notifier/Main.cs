@@ -370,28 +370,9 @@ namespace Blats_Checker_Notifier
 
         private void WhoIsChecker() // checking whois from cmd
         {
-            // adding the path where the folder and the zip file will created
-            string folderPath = @"C:\Blats-Notifier";
-            string filePath = @"C:\Blats-Notifier\WhoIs.zip";
-            string extractPath = @"C:\Blats-Notifier\WhoIs";
-            if (!Directory.Exists(folderPath))
-            {
-                System.IO.Directory.CreateDirectory(folderPath);
-                WebClient Client = new WebClient();
-                Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
-                ZipFile.ExtractToDirectory(filePath, extractPath);
-                Process.Start("C:\\Blats-Notifier\\WhoIs\\whois.exe");
-            }
-            else
-            {
-                if(!File.Exists(filePath))
-                {
-                    WebClient Client = new WebClient();
-                    Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
-                    ZipFile.ExtractToDirectory(filePath, extractPath);
-                    Process.Start("C:\\Blats-Notifier\\WhoIs\\whois.exe");
-                }
-            }
+           // adding the path where the folder and the zip file will created
+            string folderPath = @"C:\Blats-Notifier\WhoIs";
+
             // open cmd command into WhoIs
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
@@ -401,7 +382,9 @@ namespace Blats_Checker_Notifier
             process.StartInfo = startInfo;
             process.Start();
             System.Threading.Thread.Sleep(3000);
-            txtWhoIsReply.Text = File.ReadAllText(extractPath + "\\" + txtWhoIs.Text + ".txt");
+            //read into richtextbox the txt we generated before and delete the txt file we created
+            txtWhoIsReply.Text = File.ReadAllText(folderPath + "\\" + txtWhoIs.Text + ".txt");
+            File.Delete(folderPath + "\\" + txtWhoIs.Text + ".txt");
         }
 
         private void btnWhoIs_Click(object sender, EventArgs e)
@@ -616,7 +599,6 @@ namespace Blats_Checker_Notifier
         private void btnSave_Click(object sender, EventArgs e)
         {
             // adding the path where the folder and the text file save button will create
-            string folderPath = @"C:\Blats-Notifier";
             string filePath = @"C:\Blats-Notifier\MySettings.txt";
             //checking if there are empty fields before saving
             if (txtEmailFrom.Text == "" || txtEmailPassFrom.Text == "" || txtEmailTo.Text == "")
@@ -668,7 +650,6 @@ namespace Blats_Checker_Notifier
                 }
                 else
                 {
-                    System.IO.Directory.CreateDirectory(folderPath);
                     string[] contents = new string[47];
                     if (themeMode == true)
                     {

