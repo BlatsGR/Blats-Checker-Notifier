@@ -16,6 +16,8 @@ using System.Timers;
 using System.Runtime.InteropServices;
 using System.IO.Compression;
 using AutoUpdaterDotNET;
+using System.Diagnostics;
+using System.Windows.Controls;
 
 namespace Blats_Checker_Notifier
 {
@@ -378,6 +380,7 @@ namespace Blats_Checker_Notifier
                 WebClient Client = new WebClient();
                 Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
                 ZipFile.ExtractToDirectory(filePath, extractPath);
+                Process.Start("C:\\Blats-Notifier\\WhoIs\\whois.exe");
             }
             else
             {
@@ -386,6 +389,7 @@ namespace Blats_Checker_Notifier
                     WebClient Client = new WebClient();
                     Client.DownloadFile("https://services.blats.gr/blats-checker-notifier/WhoIs.zip", @"C:\Blats-Notifier\WhoIs.zip");
                     ZipFile.ExtractToDirectory(filePath, extractPath);
+                    Process.Start("C:\\Blats-Notifier\\WhoIs\\whois.exe");
                 }
             }
             // open cmd command into WhoIs
@@ -396,6 +400,8 @@ namespace Blats_Checker_Notifier
             startInfo.Arguments = "/C cd C:/Blats-Notifier/WhoIs && whois -v " + txtWhoIs.Text + " > " + txtWhoIs.Text + ".txt";
             process.StartInfo = startInfo;
             process.Start();
+            System.Threading.Thread.Sleep(3000);
+            txtWhoIsReply.Text = File.ReadAllText(extractPath + "\\" + txtWhoIs.Text + ".txt");
         }
 
         private void btnWhoIs_Click(object sender, EventArgs e)

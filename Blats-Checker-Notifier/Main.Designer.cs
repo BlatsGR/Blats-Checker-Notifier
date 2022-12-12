@@ -47,6 +47,9 @@
             this.txtIPHostname2 = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.WhoIsLookup = new System.Windows.Forms.TabPage();
+            this.txtWhoIsReply = new System.Windows.Forms.RichTextBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnWhoIs = new MaterialSkin.Controls.MaterialButton();
             this.txtWhoIs = new MaterialSkin.Controls.MaterialTextBox();
             this.lblWhois = new MaterialSkin.Controls.MaterialLabel();
@@ -172,11 +175,19 @@
             this.btnSave = new MaterialSkin.Controls.MaterialButton();
             this.lblSaveAndLoad = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.AboutInfo = new System.Windows.Forms.TabPage();
+            this.lblAppInfo9 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo8 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo7 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo6 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo5 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo4 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo3 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo2 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAppInfo = new MaterialSkin.Controls.MaterialLabel();
             this.lblCurrentIP = new MaterialSkin.Controls.MaterialLabel();
             this.lblDevelop = new MaterialSkin.Controls.MaterialLabel();
             this.lblShowTime = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.materialTabControl1.SuspendLayout();
             this.PingTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -196,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SaveLoadSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.AboutInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -212,6 +224,7 @@
             this.imageList1.Images.SetKeyName(6, "search.png");
             this.imageList1.Images.SetKeyName(7, "save.png");
             this.imageList1.Images.SetKeyName(8, "whois.png");
+            this.imageList1.Images.SetKeyName(9, "information.png");
             // 
             // materialTabControl1
             // 
@@ -224,6 +237,7 @@
             this.materialTabControl1.Controls.Add(this.TimerSettings);
             this.materialTabControl1.Controls.Add(this.ThemeSettings);
             this.materialTabControl1.Controls.Add(this.SaveLoadSettings);
+            this.materialTabControl1.Controls.Add(this.AboutInfo);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -279,12 +293,12 @@
             this.lblPHostname.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPHostname.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPHostname.HighEmphasis = true;
-            this.lblPHostname.Location = new System.Drawing.Point(334, 183);
+            this.lblPHostname.Location = new System.Drawing.Point(342, 183);
             this.lblPHostname.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPHostname.Name = "lblPHostname";
-            this.lblPHostname.Size = new System.Drawing.Size(145, 24);
+            this.lblPHostname.Size = new System.Drawing.Size(129, 24);
             this.lblPHostname.TabIndex = 5;
-            this.lblPHostname.Text = "IP - HOSTNAME";
+            this.lblPHostname.Text = "IP - Hostname";
             this.lblPHostname.UseAccent = true;
             // 
             // txtIPHostname
@@ -341,7 +355,7 @@
             this.lblPortSelector.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPortSelector.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPortSelector.HighEmphasis = true;
-            this.lblPortSelector.Location = new System.Drawing.Point(538, 183);
+            this.lblPortSelector.Location = new System.Drawing.Point(536, 183);
             this.lblPortSelector.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPortSelector.Name = "lblPortSelector";
             this.lblPortSelector.Size = new System.Drawing.Size(118, 24);
@@ -399,7 +413,7 @@
             this.lblPortCheck.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPortCheck.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPortCheck.HighEmphasis = true;
-            this.lblPortCheck.Location = new System.Drawing.Point(389, 183);
+            this.lblPortCheck.Location = new System.Drawing.Point(382, 183);
             this.lblPortCheck.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPortCheck.Name = "lblPortCheck";
             this.lblPortCheck.Size = new System.Drawing.Size(39, 24);
@@ -455,12 +469,12 @@
             this.lblIPHostname2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblIPHostname2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblIPHostname2.HighEmphasis = true;
-            this.lblIPHostname2.Location = new System.Drawing.Point(154, 183);
+            this.lblIPHostname2.Location = new System.Drawing.Point(160, 183);
             this.lblIPHostname2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblIPHostname2.Name = "lblIPHostname2";
-            this.lblIPHostname2.Size = new System.Drawing.Size(145, 24);
+            this.lblIPHostname2.Size = new System.Drawing.Size(129, 24);
             this.lblIPHostname2.TabIndex = 8;
-            this.lblIPHostname2.Text = "IP - HOSTNAME";
+            this.lblIPHostname2.Text = "IP - Hostname";
             this.lblIPHostname2.UseAccent = true;
             // 
             // txtIPHostname2
@@ -492,6 +506,7 @@
             // 
             // WhoIsLookup
             // 
+            this.WhoIsLookup.Controls.Add(this.txtWhoIsReply);
             this.WhoIsLookup.Controls.Add(this.materialLabel2);
             this.WhoIsLookup.Controls.Add(this.iconButton1);
             this.WhoIsLookup.Controls.Add(this.btnWhoIs);
@@ -507,6 +522,46 @@
             this.WhoIsLookup.Text = "WHOIS Lookup";
             this.WhoIsLookup.UseVisualStyleBackColor = true;
             // 
+            // txtWhoIsReply
+            // 
+            this.txtWhoIsReply.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtWhoIsReply.Location = new System.Drawing.Point(5, 259);
+            this.txtWhoIsReply.Name = "txtWhoIsReply";
+            this.txtWhoIsReply.ReadOnly = true;
+            this.txtWhoIsReply.Size = new System.Drawing.Size(866, 182);
+            this.txtWhoIsReply.TabIndex = 21;
+            this.txtWhoIsReply.Text = "";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel2.Location = new System.Drawing.Point(49, 446);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(587, 14);
+            this.materialLabel2.TabIndex = 20;
+            this.materialLabel2.Text = "WhoIs Lookup using cmd to retrieve infos do not worry when you see a cmd window! " +
+    "Unsupported TLDs: .gr\r\n";
+            this.materialLabel2.UseAccent = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(10, 440);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(33, 25);
+            this.iconButton1.TabIndex = 19;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // btnWhoIs
             // 
             this.btnWhoIs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -515,7 +570,7 @@
             this.btnWhoIs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWhoIs.HighEmphasis = true;
             this.btnWhoIs.Icon = null;
-            this.btnWhoIs.Location = new System.Drawing.Point(348, 229);
+            this.btnWhoIs.Location = new System.Drawing.Point(348, 218);
             this.btnWhoIs.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnWhoIs.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnWhoIs.Name = "btnWhoIs";
@@ -535,7 +590,7 @@
             this.txtWhoIs.Depth = 0;
             this.txtWhoIs.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtWhoIs.LeadingIcon = null;
-            this.txtWhoIs.Location = new System.Drawing.Point(317, 170);
+            this.txtWhoIs.Location = new System.Drawing.Point(317, 159);
             this.txtWhoIs.MaxLength = 50;
             this.txtWhoIs.MouseState = MaterialSkin.MouseState.OUT;
             this.txtWhoIs.Multiline = false;
@@ -553,12 +608,12 @@
             this.lblWhois.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblWhois.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblWhois.HighEmphasis = true;
-            this.lblWhois.Location = new System.Drawing.Point(340, 134);
+            this.lblWhois.Location = new System.Drawing.Point(340, 123);
             this.lblWhois.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblWhois.Name = "lblWhois";
             this.lblWhois.Size = new System.Drawing.Size(127, 24);
             this.lblWhois.TabIndex = 6;
-            this.lblWhois.Text = "WhoIs Lookup";
+            this.lblWhois.Text = "Domain Name";
             this.lblWhois.UseAccent = true;
             // 
             // pictureBox9
@@ -882,12 +937,12 @@
             this.lblPingIPHostname4.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPingIPHostname4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPingIPHostname4.HighEmphasis = true;
-            this.lblPingIPHostname4.Location = new System.Drawing.Point(716, 121);
+            this.lblPingIPHostname4.Location = new System.Drawing.Point(726, 121);
             this.lblPingIPHostname4.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPingIPHostname4.Name = "lblPingIPHostname4";
-            this.lblPingIPHostname4.Size = new System.Drawing.Size(145, 24);
+            this.lblPingIPHostname4.Size = new System.Drawing.Size(129, 24);
             this.lblPingIPHostname4.TabIndex = 34;
-            this.lblPingIPHostname4.Text = "IP - HOSTNAME";
+            this.lblPingIPHostname4.Text = "IP - Hostname";
             this.lblPingIPHostname4.UseAccent = true;
             // 
             // lblPingIPHostname3
@@ -898,12 +953,12 @@
             this.lblPingIPHostname3.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPingIPHostname3.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPingIPHostname3.HighEmphasis = true;
-            this.lblPingIPHostname3.Location = new System.Drawing.Point(487, 121);
+            this.lblPingIPHostname3.Location = new System.Drawing.Point(497, 121);
             this.lblPingIPHostname3.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPingIPHostname3.Name = "lblPingIPHostname3";
-            this.lblPingIPHostname3.Size = new System.Drawing.Size(145, 24);
+            this.lblPingIPHostname3.Size = new System.Drawing.Size(129, 24);
             this.lblPingIPHostname3.TabIndex = 33;
-            this.lblPingIPHostname3.Text = "IP - HOSTNAME";
+            this.lblPingIPHostname3.Text = "IP - Hostname";
             this.lblPingIPHostname3.UseAccent = true;
             // 
             // txtPing12
@@ -1100,12 +1155,12 @@
             this.lblPingIPHostname2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPingIPHostname2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPingIPHostname2.HighEmphasis = true;
-            this.lblPingIPHostname2.Location = new System.Drawing.Point(264, 121);
+            this.lblPingIPHostname2.Location = new System.Drawing.Point(274, 121);
             this.lblPingIPHostname2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPingIPHostname2.Name = "lblPingIPHostname2";
-            this.lblPingIPHostname2.Size = new System.Drawing.Size(145, 24);
+            this.lblPingIPHostname2.Size = new System.Drawing.Size(129, 24);
             this.lblPingIPHostname2.TabIndex = 20;
-            this.lblPingIPHostname2.Text = "IP - HOSTNAME";
+            this.lblPingIPHostname2.Text = "IP - Hostname";
             this.lblPingIPHostname2.UseAccent = true;
             // 
             // lblPing6
@@ -1274,12 +1329,12 @@
             this.lblPingIPHostname.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPingIPHostname.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPingIPHostname.HighEmphasis = true;
-            this.lblPingIPHostname.Location = new System.Drawing.Point(45, 121);
+            this.lblPingIPHostname.Location = new System.Drawing.Point(55, 121);
             this.lblPingIPHostname.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPingIPHostname.Name = "lblPingIPHostname";
-            this.lblPingIPHostname.Size = new System.Drawing.Size(145, 24);
+            this.lblPingIPHostname.Size = new System.Drawing.Size(129, 24);
             this.lblPingIPHostname.TabIndex = 9;
-            this.lblPingIPHostname.Text = "IP - HOSTNAME";
+            this.lblPingIPHostname.Text = "IP - Hostname";
             this.lblPingIPHostname.UseAccent = true;
             // 
             // lblPing1
@@ -1679,7 +1734,7 @@
             this.lblPorts2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPorts2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPorts2.HighEmphasis = true;
-            this.lblPorts2.Location = new System.Drawing.Point(738, 127);
+            this.lblPorts2.Location = new System.Drawing.Point(736, 127);
             this.lblPorts2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPorts2.Name = "lblPorts2";
             this.lblPorts2.Size = new System.Drawing.Size(39, 24);
@@ -1695,7 +1750,7 @@
             this.lblPorts.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPorts.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPorts.HighEmphasis = true;
-            this.lblPorts.Location = new System.Drawing.Point(314, 127);
+            this.lblPorts.Location = new System.Drawing.Point(312, 127);
             this.lblPorts.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPorts.Name = "lblPorts";
             this.lblPorts.Size = new System.Drawing.Size(39, 24);
@@ -1728,12 +1783,12 @@
             this.lblPortIPHostname2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPortIPHostname2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPortIPHostname2.HighEmphasis = true;
-            this.lblPortIPHostname2.Location = new System.Drawing.Point(485, 127);
+            this.lblPortIPHostname2.Location = new System.Drawing.Point(495, 127);
             this.lblPortIPHostname2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPortIPHostname2.Name = "lblPortIPHostname2";
-            this.lblPortIPHostname2.Size = new System.Drawing.Size(145, 24);
+            this.lblPortIPHostname2.Size = new System.Drawing.Size(129, 24);
             this.lblPortIPHostname2.TabIndex = 34;
-            this.lblPortIPHostname2.Text = "IP - HOSTNAME";
+            this.lblPortIPHostname2.Text = "IP - Hostname";
             this.lblPortIPHostname2.UseAccent = true;
             // 
             // lblPort10
@@ -1887,12 +1942,12 @@
             this.lblPortIPHostname.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblPortIPHostname.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.lblPortIPHostname.HighEmphasis = true;
-            this.lblPortIPHostname.Location = new System.Drawing.Point(71, 127);
+            this.lblPortIPHostname.Location = new System.Drawing.Point(77, 127);
             this.lblPortIPHostname.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPortIPHostname.Name = "lblPortIPHostname";
-            this.lblPortIPHostname.Size = new System.Drawing.Size(145, 24);
+            this.lblPortIPHostname.Size = new System.Drawing.Size(129, 24);
             this.lblPortIPHostname.TabIndex = 12;
-            this.lblPortIPHostname.Text = "IP - HOSTNAME";
+            this.lblPortIPHostname.Text = "IP - Hostname";
             this.lblPortIPHostname.UseAccent = true;
             // 
             // lblPort1
@@ -2555,6 +2610,176 @@
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             // 
+            // AboutInfo
+            // 
+            this.AboutInfo.Controls.Add(this.lblAppInfo9);
+            this.AboutInfo.Controls.Add(this.lblAppInfo8);
+            this.AboutInfo.Controls.Add(this.lblAppInfo7);
+            this.AboutInfo.Controls.Add(this.lblAppInfo6);
+            this.AboutInfo.Controls.Add(this.lblAppInfo5);
+            this.AboutInfo.Controls.Add(this.lblAppInfo4);
+            this.AboutInfo.Controls.Add(this.lblAppInfo3);
+            this.AboutInfo.Controls.Add(this.lblAppInfo2);
+            this.AboutInfo.Controls.Add(this.lblAppInfo);
+            this.AboutInfo.ImageKey = "information.png";
+            this.AboutInfo.Location = new System.Drawing.Point(4, 74);
+            this.AboutInfo.Name = "AboutInfo";
+            this.AboutInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.AboutInfo.Size = new System.Drawing.Size(925, 441);
+            this.AboutInfo.TabIndex = 9;
+            this.AboutInfo.Text = "About App Infos";
+            this.AboutInfo.UseVisualStyleBackColor = true;
+            // 
+            // lblAppInfo9
+            // 
+            this.lblAppInfo9.AutoSize = true;
+            this.lblAppInfo9.Depth = 0;
+            this.lblAppInfo9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo9.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo9.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo9.HighEmphasis = true;
+            this.lblAppInfo9.Location = new System.Drawing.Point(16, 301);
+            this.lblAppInfo9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo9.Name = "lblAppInfo9";
+            this.lblAppInfo9.Size = new System.Drawing.Size(662, 24);
+            this.lblAppInfo9.TabIndex = 17;
+            this.lblAppInfo9.Text = "and if there is available update it will inform you to download the new App!";
+            this.lblAppInfo9.UseAccent = true;
+            // 
+            // lblAppInfo8
+            // 
+            this.lblAppInfo8.AutoSize = true;
+            this.lblAppInfo8.Depth = 0;
+            this.lblAppInfo8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo8.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo8.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo8.HighEmphasis = true;
+            this.lblAppInfo8.Location = new System.Drawing.Point(16, 266);
+            this.lblAppInfo8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo8.Name = "lblAppInfo8";
+            this.lblAppInfo8.Size = new System.Drawing.Size(802, 24);
+            this.lblAppInfo8.TabIndex = 16;
+            this.lblAppInfo8.Text = "everything will run as you set it! It has light and dark mode. WhoIs Lookup is al" +
+    "so available";
+            this.lblAppInfo8.UseAccent = true;
+            // 
+            // lblAppInfo7
+            // 
+            this.lblAppInfo7.AutoSize = true;
+            this.lblAppInfo7.Depth = 0;
+            this.lblAppInfo7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo7.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo7.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo7.HighEmphasis = true;
+            this.lblAppInfo7.Location = new System.Drawing.Point(16, 232);
+            this.lblAppInfo7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo7.Name = "lblAppInfo7";
+            this.lblAppInfo7.Size = new System.Drawing.Size(829, 24);
+            this.lblAppInfo7.TabIndex = 15;
+            this.lblAppInfo7.Text = "C:/Blats-Notifier/MySettings.txt. With the load button, the next time you open th" +
+    "e application";
+            this.lblAppInfo7.UseAccent = true;
+            // 
+            // lblAppInfo6
+            // 
+            this.lblAppInfo6.AutoSize = true;
+            this.lblAppInfo6.Depth = 0;
+            this.lblAppInfo6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo6.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo6.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo6.HighEmphasis = true;
+            this.lblAppInfo6.Location = new System.Drawing.Point(16, 199);
+            this.lblAppInfo6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo6.Name = "lblAppInfo6";
+            this.lblAppInfo6.Size = new System.Drawing.Size(820, 24);
+            this.lblAppInfo6.TabIndex = 14;
+            this.lblAppInfo6.Text = "60 minutes). With the save button, everything you have defined is saved locally i" +
+    "n the folder:";
+            this.lblAppInfo6.UseAccent = true;
+            // 
+            // lblAppInfo5
+            // 
+            this.lblAppInfo5.AutoSize = true;
+            this.lblAppInfo5.Depth = 0;
+            this.lblAppInfo5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo5.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo5.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo5.HighEmphasis = true;
+            this.lblAppInfo5.Location = new System.Drawing.Point(16, 166);
+            this.lblAppInfo5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo5.Name = "lblAppInfo5";
+            this.lblAppInfo5.Size = new System.Drawing.Size(806, 24);
+            this.lblAppInfo5.TabIndex = 13;
+            this.lblAppInfo5.Text = "(available: 1 minute, 3 minutes, 5 minutes, 10 minutes, 15 minutes, 20 minutes, 3" +
+    "0 minutes,";
+            this.lblAppInfo5.UseAccent = true;
+            // 
+            // lblAppInfo4
+            // 
+            this.lblAppInfo4.AutoSize = true;
+            this.lblAppInfo4.Depth = 0;
+            this.lblAppInfo4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo4.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo4.HighEmphasis = true;
+            this.lblAppInfo4.Location = new System.Drawing.Point(16, 132);
+            this.lblAppInfo4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo4.Name = "lblAppInfo4";
+            this.lblAppInfo4.Size = new System.Drawing.Size(694, 24);
+            this.lblAppInfo4.TabIndex = 12;
+            this.lblAppInfo4.Text = "any of the ips you have set. You can define how long this check will take place";
+            this.lblAppInfo4.UseAccent = true;
+            // 
+            // lblAppInfo3
+            // 
+            this.lblAppInfo3.AutoSize = true;
+            this.lblAppInfo3.Depth = 0;
+            this.lblAppInfo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo3.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo3.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo3.HighEmphasis = true;
+            this.lblAppInfo3.Location = new System.Drawing.Point(16, 98);
+            this.lblAppInfo3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo3.Name = "lblAppInfo3";
+            this.lblAppInfo3.Size = new System.Drawing.Size(891, 24);
+            this.lblAppInfo3.TabIndex = 11;
+            this.lblAppInfo3.Text = "as well as a recipient email to which notifications will be sent if any port is c" +
+    "losed or cannot ping any";
+            this.lblAppInfo3.UseAccent = true;
+            // 
+            // lblAppInfo2
+            // 
+            this.lblAppInfo2.AutoSize = true;
+            this.lblAppInfo2.Depth = 0;
+            this.lblAppInfo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo2.HighEmphasis = true;
+            this.lblAppInfo2.Location = new System.Drawing.Point(16, 65);
+            this.lblAppInfo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo2.Name = "lblAppInfo2";
+            this.lblAppInfo2.Size = new System.Drawing.Size(662, 24);
+            this.lblAppInfo2.TabIndex = 10;
+            this.lblAppInfo2.Text = "You can also set a sender email (hotmail for now) and the email password,";
+            this.lblAppInfo2.UseAccent = true;
+            // 
+            // lblAppInfo
+            // 
+            this.lblAppInfo.AutoSize = true;
+            this.lblAppInfo.Depth = 0;
+            this.lblAppInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAppInfo.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblAppInfo.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblAppInfo.HighEmphasis = true;
+            this.lblAppInfo.Location = new System.Drawing.Point(16, 23);
+            this.lblAppInfo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAppInfo.Name = "lblAppInfo";
+            this.lblAppInfo.Size = new System.Drawing.Size(764, 24);
+            this.lblAppInfo.TabIndex = 9;
+            this.lblAppInfo.Text = "Blats Checker - Notifier is a program that you can ping ips or check if any port " +
+    "is open.";
+            this.lblAppInfo.UseAccent = true;
+            // 
             // lblCurrentIP
             // 
             this.lblCurrentIP.AutoSize = true;
@@ -2604,36 +2829,6 @@
             this.lblShowTime.Text = "Next check in:";
             this.lblShowTime.UseAccent = true;
             // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
-            this.materialLabel2.Location = new System.Drawing.Point(49, 446);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(587, 14);
-            this.materialLabel2.TabIndex = 20;
-            this.materialLabel2.Text = "WhoIs Lookup using cmd to retrieve infos do not worry when you see a cmd window! " +
-    "Unsupported TLDs: .gr\r\n";
-            this.materialLabel2.UseAccent = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(10, 440);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(33, 25);
-            this.iconButton1.TabIndex = 19;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2679,6 +2874,8 @@
             this.SaveLoadSettings.ResumeLayout(false);
             this.SaveLoadSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.AboutInfo.ResumeLayout(false);
+            this.AboutInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2833,5 +3030,16 @@
         private MaterialSkin.Controls.MaterialLabel lblWhois;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private TabPage AboutInfo;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo2;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo3;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo5;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo4;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo9;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo8;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo7;
+        private MaterialSkin.Controls.MaterialLabel lblAppInfo6;
+        private RichTextBox txtWhoIsReply;
     }
 }

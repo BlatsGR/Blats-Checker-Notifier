@@ -45,7 +45,6 @@ namespace Blats_Checker_Notifier
                 string path2 = @"PresentationNative_cor3.dll";
                 File.SetAttributes(path2, File.GetAttributes(path) | FileAttributes.Hidden);
             }
- 
         }
  
         private void timer1_Tick(object sender, EventArgs e)
